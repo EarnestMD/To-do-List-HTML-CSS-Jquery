@@ -1,0 +1,141 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap');
+
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    background-color: hsl(227, 100%, 95%);
+}
+
+
+.title{
+    width: 500px;
+    height: 50px;
+    background-color:hsl(267, 73%, 71%);
+    font-family: 'Roboto',sans-serif;
+    color: white;
+    font-weight: 600;
+    font-size: 25px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+.ulContainer{
+    background-color: hsl(0, 0%, 100%);
+    width: 500px;
+    padding-bottom: 20px;
+    min-height: 300px;
+    margin-top: 50px;
+    list-style: none;
+    position: relative;
+}
+#Container{
+    transition: all 20s ease-in-out;
+
+}
+#AjoutTask{
+    display: none;
+    margin-top: 50px;
+    width: 500px;
+    min-height: 100px;
+    background-color: hsl(0, 0%, 100%);
+    position: relative;
+}
+#AjoutTask #valider{
+position: absolute;
+bottom: 0;
+left: 0;
+transform: translate(10%,50%);
+}
+#AjoutTask #retour{
+position: absolute;
+bottom: 0;
+right: 0;
+transform: translate(-10%,50%);
+}
+input{
+    position: absolute;
+    font-size: 25px;
+    top: 20px;
+    left: 250px;
+    transform: translate(-50%);
+    border: none;
+    border-bottom: 2px solid hsl(267, 73%, 71%);
+    text-align: center;
+}
+::-webkit-input-placeholder{
+    text-align: center;
+}
+input:focus{
+    outline: none;
+    overflow:visible;
+
+}
+button{
+    
+    width: 200px;
+    height: 50px;
+    border-radius: 25px;
+    background-color: hsl(267, 73%, 71%);
+    border: none;
+    font-family: 'Roboto',sans-serif;
+    color: white;
+    font-size: 25px;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+#NewTask{
+    position: absolute;
+    bottom: 0px;
+    left: 250px;
+    transform: translate(-50%,50%);
+}
+
+
+ .checked{
+    text-decoration: line-through;
+    background-color: lightgreen;
+    transition: 0.2s;
+}
+li{
+    text-transform: capitalize;
+    list-style: none;
+    margin: 5px;
+    border-radius: 5px;
+    padding: 8px;
+    width: 420px;
+    font-size: 20px;
+    position: relative;
+    overflow-wrap: break-word;
+}
+li .fa-check{
+    top: 50%;
+    transform: translateY(-50%);
+    position: absolute;
+    right: -70px;
+    margin-right: 40px;
+    cursor:pointer;
+    color: green;
+}
+
+li .fa-trash-can{
+    top: 50%;
+    transform: translateY(-50%);
+    position: absolute;
+    right:-70px;
+    margin-right: 10px;
+    cursor: pointer;
+    color: red;
+}
+
